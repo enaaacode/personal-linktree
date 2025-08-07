@@ -1,59 +1,50 @@
+---
+layout: none
+title: "Linktree – Annabelle Feiler"
+description: "Willkommen auf meinem Linktree! Hier findest du alle wichtigen Links: zu meiner Website, GitHub, LinkedIn und meine E-Mail-Adresse."
+keywords: "UX Design, UI Design, Barrierefreiheit, Webdesign, Annabelle Feiler, HTML, CSS, JS"
+---
+
 <!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <meta
-      name="description"
-      content="Willkommen auf meinem Linktree! Hier findest du alle wichtigen Links: zu meiner Website, GitHub, LinkedIn und meine E-Mail-Adresse."
-    />
-
-    <meta
-      name="keywords"
-      content="UX Design, UI Design, Barrierefreiheit, Webdesign, Annabelle Feiler, HTML, CSS, JS"
-    />
-    <meta name="Annabelle Feiler" content="Annabelle Feilers Linktree" />
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="keywords" content="{{ page.keywords }}" />
+    <meta name="author" content="{{ site.author }}" />
 
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
     <link rel="stylesheet" href="style.css" />
-
-    <title>Linktree – Annabelle Feiler</title>
+    <script
+      src="https://kit.fontawesome.com/81f652e334.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <main>
       <div class="bild-und-name">
         <div class="runder-bildrahmen">
           <img
-            src="assets/annabelle_portrait.jpg"
+            src="assets/annabelle_portrait.png"
             alt="Profilbild von Annabelle Feiler im Pixel-Stil"
           />
         </div>
 
         <h1>Annabelle Feiler</h1>
-        <p class="code-style">UX/UI, Visual Design & Frontend Development</p>
+        <p class="code-style">UX, Frontend Development & Visual Design</p>
       </div>
       <nav aria-label="Wichtige Links">
         <ul>
+          {% for item in site.data.links %}
           <li>
-            <a href="https://studio-feiler.com/">Website</a>
+            <a href="{{item.link}}" target="_blank" rel="noopener noreferrer"
+              >{{item.title}}</a
+            >
           </li>
-          <li>
-            <a href="mailto:hello@studio-feiler.com">E-Mail</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/annabelle-feiler/">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://github.com/enaaacode">GitHub</a>
-          </li>
-
-          <li>
-            <a href="https://studio-feiler.com/impressum.html">Impressum</a>
-          </li>
-
-          <li><a href="https://coff.ee/enaaacode">Buy me a coffee ☕️</a></li>
+          {% endfor %}
         </ul>
       </nav>
     </main>
