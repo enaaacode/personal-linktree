@@ -18,11 +18,15 @@ body {
   font-family: "DM Sans", sans-serif;
   line-height: 1.6;
   color: #d0d0d0;
-  background: url(assets/background_linktree.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+  background: linear-gradient(
+      217deg,
+      rgba(255, 130, 255, 0.8),
+      transparent 70.71%
+    ),
+    linear-gradient(127deg, rgba(255, 130, 58, 0.8), transparent 70.71%),
+    linear-gradient(336deg, rgba(132, 132, 212, 0.8), transparent 70.71%);
   padding: 2rem;
+  min-height: 100vh;
 }
 
 main {
