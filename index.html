@@ -25,28 +25,36 @@ keywords: "UX Design, UI Design, Barrierefreiheit, Webdesign, Annabelle Feiler, 
   </head>
   <body>
     <main>
-      <div class="bild-und-name">
-        <div class="runder-bildrahmen">
-          <img
-            src="assets/annabelle_portrait_rl.jpg"
-            alt="Profilbild von Annabelle Feiler"
-          />
-        </div>
-
+      <div class="intro">
+        <img src="assets/favicon.svg" alt="" width="50px" />
         <h1>Annabelle Feiler</h1>
         <p>UX/UI, Frontend Development & Visual Design</p>
       </div>
+
       <nav aria-label="Wichtige Links">
         <ul>
           {% for item in site.data.links %}
           <li>
-            <a href="{{item.link}}" target="_blank" rel="noopener noreferrer"
+            <a
+              href="{{item.link}}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="li_link"
               >{{item.title}}</a
             >
           </li>
           {% endfor %}
         </ul>
       </nav>
+      <p>
+        Linktree for free 💜
+        <a
+          href="https://github.com/enaaacode/personal-linktree"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Check it out.</a
+        >
+      </p>
     </main>
   </body>
 </html>
